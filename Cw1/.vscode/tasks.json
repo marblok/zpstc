@@ -1,0 +1,33 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    // https://code.visualstudio.com/docs/editor/tasks
+    // ${command:cpptools.activeConfigName}
+    "tasks": [
+        {
+            "label": "Build Cw1",
+            "type": "shell",
+            "command": "make build -f Makefile.main VS_CFG=${command:cpptools.activeConfigName}",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true
+            },
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "Clean Cw1",
+            "type": "shell",
+            "command": "make clean -f Makefile.main VS_CFG=${command:cpptools.activeConfigName}",
+            "group": "build",
+            "presentation": {
+                "echo": true
+            },
+            "problemMatcher": "$gcc"
+        }
+
+   ]
+}
