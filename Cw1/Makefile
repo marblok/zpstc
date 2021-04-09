@@ -18,19 +18,19 @@ ifeq ($(MODE),Release)
 	LINKER_FLAGS = $(comflag)  -s -static-libgcc -static-libstdc++ $(MISC_LINKER_FLAGS)
 	INCLUDES := -I"$(DSPElib_DIR)/include" -I"$(DSPElib_DIR)/include/rls"
 	DSPElib_FULLDIR = $(DSPElib_DIR)/rls
-	EXE_FILENAME = Cw1_zad3_rls.exe
+	EXE_FILENAME = $(CPP_FILENAME)_rls.exe
 else
 	CFLAGS   = $(comflag) -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -W -Wshadow -Wconversion -fstrict-aliasing -fmax-errors=5
 	LINKER_FLAGS   = $(comflag)  -static-libgcc -static-libstdc++ $(MISC_LINKER_FLAGS)
 	INCLUDES := -I"$(DSPElib_DIR)/include" -I"$(DSPElib_DIR)/include/dbg"
 	DSPElib_FULLDIR = $(DSPElib_DIR)/dbg
-	EXE_FILENAME = Cw1_zad3_dbg.exe
+	EXE_FILENAME = $(CPP_FILENAME)_dbg.exe
 endif
 # -U__STRICT_ANSI__ jest potrzebne do kompilacji debug_new.cpp, jezeli pominac ten plik to mozna rowniez wyrzucic te opcje
 #CFLAGS_debug   = $(comflag) -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -W -Wshadow -Wco#nversion -fstrict-aliasing -U__STRICT_ANSI__
 
 SOURCES_NAMES = 
-SOURCES_NAMES += Cw1_zad3.cpp 
+SOURCES_NAMES += $(CPP_FILENAME).cpp 
 SOURCES = $(addprefix $(SRC_CPP_SUBDIR)/,$(SOURCES_NAMES))
 
 SOURCES_DBG =

@@ -1,2 +1,2 @@
-wavread('../cw1_zad3.wav')
-fileread('../cw1_zad3.wav')
+audioread('../ex1_task3.wav')
+readaudiofile('../ex1_task3.wav')

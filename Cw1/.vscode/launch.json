@@ -5,10 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(gdb) Cw1 — debug run ",
+            "name": "(gdb) Ex1 — debug run ",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/Cw1_zad3_dbg.exe",
+            "program": "${workspaceFolder}/Ex1_task3_dbg.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
@@ -23,7 +23,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "Build Cw1"
+            "preLaunchTask": "Build Ex1_task3.cpp"
         },
         {
             "name": "(gdb) Launch",

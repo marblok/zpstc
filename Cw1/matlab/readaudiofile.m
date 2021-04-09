@@ -1,5 +1,5 @@
-function [x, Fs] = fileread(filename, param)
-% [x, Fs] = fileread(filename, param)
+function [x, Fs] = readaudiofile(filename, param)
+% [x, Fs] = audiofileread(filename, param)
 %
 % returns vector x of the size SIZE=[samples channels].
 %  eg. x = x(:,1) + j*x(:,2);
@@ -12,7 +12,7 @@ function [x, Fs] = fileread(filename, param)
 %    *.flt
 %    *.wav
 %    *.tape
-% last modification: 2018.03.05
+% last modification: 2021.03.29
 % Author: Marek Blok
 
 return_cplx = 0;
@@ -46,22 +46,26 @@ end
 switch file_type,
   case 'w',
     if strcmp(param, 'size') == 1,
-      if exist('audioread','file') ~= 2
+      if exist('audioread','file') == 0
         x = wavread(filename, 'size');
         %  siz = [samples channels].
       else
         info = audioinfo(filename);
         x = [info.TotalSamples, info.NumChannels];
+        Fs = info.SampleRate;
       end      
     else
       if isfinite(param)
-        if exist('audioread','file') ~= 2
+        if exist('audioread','file') == 0
           [x, Fs] = wavread(filename, param);
         else
+          if length(param) == 1
+            param = [1, param];
+          end
           [x, Fs] = audioread(filename, param);
         end
       else
-        if exist('audioread','file') ~= 2
+        if exist('audioread','file') == 0
           [x, Fs] = wavread(filename);
         else
           [x, Fs] = audioread(filename);

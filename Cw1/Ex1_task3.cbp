@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="Cw1_zad3" />
+		<Option title="Ex1_task3" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="default">
-				<Option output="Cw1_zad3" prefix_auto="1" extension_auto="1" />
+				<Option output="Ex1_task3" prefix_auto="1" extension_auto="1" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 			</Target>
@@ -27,7 +27,7 @@
 			<Add library="winmm" />
 			<Add directory="../DSPElib/CodeBlocks-m32_TDM_5.1.0/dbg" />
 		</Linker>
-		<Unit filename="Cw1_zad3.cpp" />
+		<Unit filename="Ex1_task3.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

@@ -6,9 +6,9 @@
     // ${command:cpptools.activeConfigName}
     "tasks": [
         {
-            "label": "Build Cw1",
+            "label": "Build Ex1_task3.cpp",
             "type": "shell",
-            "command": "make build -f Makefile.main VS_CFG=${command:cpptools.activeConfigName}",
+            "command": "make build -f Makefile.main FILE=Ex1_task3 VS_CFG=${command:cpptools.activeConfigName}",
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -19,7 +19,7 @@
             "problemMatcher": "$gcc"
         },
         {
-            "label": "Clean Cw1",
+            "label": "Clean Ex1_task3.cpp",
             "type": "shell",
             "command": "make clean -f Makefile.main VS_CFG=${command:cpptools.activeConfigName}",
             "group": "build",
