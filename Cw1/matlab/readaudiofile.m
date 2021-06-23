@@ -1,5 +1,5 @@
 function [x, Fs] = readaudiofile(filename, param)
-% [x, Fs] = audiofileread(filename, param)
+% [x, Fs] = readaudiofile(filename, param)
 %
 % returns vector x of the size SIZE=[samples channels].
 %  eg. x = x(:,1) + j*x(:,2);
