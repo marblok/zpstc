@@ -2,6 +2,7 @@ Cw1/Ex1_task3_dbg.exe
 Cw1/Ex1_task3_rls.exe
 Cw1/Ex1_task3.dot
 Cw1/Ex1_task3.gif
+Cw1/Ex1_task3.layout
 Cw1/ex1_task3.wav
 Cw1/log_file.txt
 Cw1/out_win_dbg
@@ -9,3 +10,12 @@ Cw1/out_win_rls
 Cw1/out_linux_dbg
 Cw1/out_linux_rls
 
+Cw2/Ex2_task1_dbg.exe
+Cw2/Ex2_task1.dot
+Cw2/ex2_task1.wav
+Cw2/Ex2_task1.layout
+Cw2/log_file.txt
+Cw2/out_win_dbg
+Cw2/out_win_rls
+Cw2/out_linux_dbg
+Cw2/out_linux_rls

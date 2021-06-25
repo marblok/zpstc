@@ -1,4 +1,4 @@
-/*! Laboratory: Advanced signal processing of telecommunication signals
+/*! Laboratory: Advanced signal processing of digital telecommunications
  * (Zaawansowane przetwarzanie sygnałów telekomunikacji cyfrowej)
  *  Ex. 1. task 3.
  *   - impulse response loaded from file
