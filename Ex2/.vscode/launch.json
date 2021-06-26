@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(gdb) Ex2 — debug run ",
+            "name": "(gdb) Ex2 — Windows debug run ",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/Ex2_task1_dbg.exe",

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Ex3_task3" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="default">
+				<Option output="Ex3_task3" prefix_auto="1" extension_auto="1" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-m64" />
+			<Add option="-g" />
+			<Add option="-std=c++0x" />
+			<Add option="-DWIN32" />
+			<Add directory="../DSPE_lib_minGW/MinGW-W64_8.1.0/include" />
+			<Add directory="../DSPE_lib_minGW/MinGW-W64_8.1.0/include/dbg" />
+		</Compiler>
+		<Linker>
+			<Add option="-static-libgcc" />
+			<Add option="-m64" />
+			<Add library="DSPE" />
+			<Add library="winmm" />
+			<Add directory="../DSPE_lib_minGW/MinGW-W64_8.1.0/dbg" />
+		</Linker>
+		<Unit filename="Ex3_task3.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

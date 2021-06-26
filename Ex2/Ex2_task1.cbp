@@ -14,18 +14,18 @@
 		</Build>
 		<Compiler>
 			<Add option="-std=c++0x" />
-			<Add option="-m32" />
+			<Add option="-m64" />
 			<Add option="-g" />
 			<Add option="-DWIN32" />
-			<Add directory="../DSPElib/CodeBlocks-m32_TDM_5.1.0/include" />
-			<Add directory="../DSPElib/CodeBlocks-m32_TDM_5.1.0/dbg" />
+			<Add directory="../DSPE_lib_minGW/MinGW-W64_8.1.0/include" />
+			<Add directory="../DSPE_lib_minGW/MinGW-W64_8.1.0/include/dbg" />
 		</Compiler>
 		<Linker>
 			<Add option="-static-libgcc" />
-			<Add option="-m32" />
+			<Add option="-m64" />
 			<Add library="DSPE" />
 			<Add library="winmm" />
-			<Add directory="../DSPElib/CodeBlocks-m32_TDM_5.1.0/dbg" />
+			<Add directory="../DSPE_lib_minGW/MinGW-W64_8.1.0/dbg" />
 		</Linker>
 		<Unit filename="Ex2_task1.cpp" />
 		<Extensions>
