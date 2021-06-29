@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Ex4_task2" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="default">
+				<Option output="Ex4_task2" prefix_auto="1" extension_auto="1" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-std=c++0x" />
+			<Add option="-m32" />
+			<Add option="-g" />
+			<Add option="-DWIN32" />
+			<Add directory="../DSPE_lib_minGW/MinGW-W64_8.1.0/include" />
+			<Add directory="../DSPE_lib_minGW/MinGW-W64_8.1.0/include/dbg" />
+		</Compiler>
+		<Linker>
+			<Add option="-static-libgcc" />
+			<Add option="-m32" />
+			<Add library="DSPE" />
+			<Add library="winmm" />
+			<Add directory="../DSPE_lib_minGW/MinGW-W64_8.1.0/dbg" />
+		</Linker>
+		<Unit filename="Ex4_task2.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
