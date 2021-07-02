@@ -5,10 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(gdb) Ex4 — widnows debug run ",
+            "name": "(gdb) Ex5 — widnows debug run ",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/Ex4_task2_dbg.exe",
+            "program": "${workspaceFolder}/Ex5_task1_dbg.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
@@ -23,7 +23,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "Build Ex4_task2.cpp"
+            "preLaunchTask": "Build Ex5_task1.cpp"
         }
     ]
 }
