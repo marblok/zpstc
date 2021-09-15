@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(gdb) Ex3 — widnows debug run ",
+            "name": "(gdb) Ex3 — windows debug run ",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/Ex3_task3_dbg.exe",
