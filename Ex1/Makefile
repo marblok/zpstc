@@ -5,7 +5,7 @@ CC=g++
 # comflag = -m64
 comflag = $(COMFLAG)
 
-DSPElib_DIR = ../../_DSPE_lib_minGW_/$(DSPElib_SUBDIR)
+DSPElib_DIR = ../DSPE_lib_minGW/$(DSPElib_SUBDIR)
 
 SRC_DIR = .
 SRC_CPP_SUBDIR = .
