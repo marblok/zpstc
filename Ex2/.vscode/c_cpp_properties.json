@@ -10,10 +10,11 @@
                 "WIN32",
                 "__DEBUG__=0"
             ],
-            .."compilerPath": "gcc.exe",
+            "compilerPath": "gcc.exe",
             "cStandard": "c11",
             "cppStandard": "c++11",
-            "intelliSenseMode": "gcc-x64"
+            "intelliSenseMode": "gcc-x64",
+            "configurationProvider": "ms-vscode.makefile-tools"
         },
         {
             "name": "Linux-Release",
@@ -40,10 +41,10 @@
                 "WIN32",
                 "__DEBUG__=1"
             ],
-            //"compilerPath": "gcc.exe",
             "cStandard": "c11",
             "cppStandard": "c++11",
-            "intelliSenseMode": "gcc-x64"
+            "intelliSenseMode": "gcc-x64",
+            "configurationProvider": "ms-vscode.makefile-tools"
         },
         {
             "name": "Linux-Debug",
@@ -60,6 +61,6 @@
             "cppStandard": "c++11",
             "intelliSenseMode": "gcc-x64"
         }
-],
+    ],
     "version": 4
 }
