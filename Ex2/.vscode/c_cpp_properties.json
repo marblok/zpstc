@@ -4,29 +4,26 @@
             "name": "Windows-Release",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/../DSPE_lib_minGW/MinGW-W64_8.1.0/include/**"
+                "${workspaceFolder}/../../_DSPE_lib_minGW_/x86_64-w64-mingw32-gcc_12.2.0/include/**"
             ],
             "defines": [
                 "WIN32",
                 "__DEBUG__=0"
             ],
-            "compilerPath": "gcc.exe",
             "cStandard": "c11",
             "cppStandard": "c++11",
-            "intelliSenseMode": "gcc-x64",
-            "configurationProvider": "ms-vscode.makefile-tools"
+            "intelliSenseMode": "gcc-x64"
         },
         {
             "name": "Linux-Release",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/../DSPE_lib_minGW/MinGW-W64_8.1.0/include/**"
+                "${workspaceFolder}/../_DSPE_lib_linux_/x86_64-linux-gnu-gcc_11/include/**"
             ],
             "defines": [
-                "WIN32",
+                "LINUX",
                 "__DEBUG__=0"
             ],
-            "compilerPath": "gcc.exe",
             "cStandard": "c11",
             "cppStandard": "c++11",
             "intelliSenseMode": "gcc-x64"
@@ -35,7 +32,7 @@
             "name": "Windows-Debug",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/../DSPE_lib_minGW/MinGW-W64_8.1.0/include/**"
+                "${workspaceFolder}/../../_DSPE_lib_minGW_/x86_64-w64-mingw32-gcc_12.2.0/include/**"
             ],
             "defines": [
                 "WIN32",
@@ -43,20 +40,18 @@
             ],
             "cStandard": "c11",
             "cppStandard": "c++11",
-            "intelliSenseMode": "gcc-x64",
-            "configurationProvider": "ms-vscode.makefile-tools"
+            "intelliSenseMode": "gcc-x64"
         },
         {
             "name": "Linux-Debug",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/../DSPE_lib_minGW/MinGW-W64_8.1.0/include/**"
+                "${workspaceFolder}/../_DSPE_lib_linux_/x86_64-linux-gnu-gcc_11/include/**"
             ],
             "defines": [
-                "WIN32",
+                "LINUX",
                 "__DEBUG__=1"
             ],
-            "compilerPath": "gcc.exe",
             "cStandard": "c11",
             "cppStandard": "c++11",
             "intelliSenseMode": "gcc-x64"

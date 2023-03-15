@@ -10,6 +10,12 @@
             "type": "shell",
             "command": "make build -f Makefile.main FILE=Ex6_task1 VS_CFG=${command:cpptools.activeConfigName}",
             "group": "build",
+            "windows": {
+                "options": {
+                    "cwd": "${workspaceFolder}",
+                    "env": {"PATH":"c:/msys64/usr/bin;c:/msys64/mingw64/bin/;${env:PATH}"}
+                }, 
+            },
             "presentation": {
                 "echo": true
             },
@@ -20,6 +26,12 @@
             "type": "shell",
             "command": "make build -f Makefile.main FILE=Ex6_task1b VS_CFG=${command:cpptools.activeConfigName}",
             "group": "build",
+            "windows": {
+                "options": {
+                    "cwd": "${workspaceFolder}",
+                    "env": {"PATH":"c:/msys64/usr/bin;c:/msys64/mingw64/bin/;${env:PATH}"}
+                }, 
+            },
             "presentation": {
                 "echo": true
             },
@@ -30,6 +42,12 @@
             "type": "shell",
             "command": "make build -f Makefile.main FILE=Ex6_task2 VS_CFG=${command:cpptools.activeConfigName}",
             "group": "build",
+            "windows": {
+                "options": {
+                    "cwd": "${workspaceFolder}",
+                    "env": {"PATH":"c:/msys64/usr/bin;c:/msys64/mingw64/bin/;${env:PATH}"}
+                }, 
+            },
             "presentation": {
                 "echo": true
             },
@@ -40,6 +58,12 @@
             "type": "shell",
             "command": "make build -f Makefile.main FILE=Ex6_task2_test VS_CFG=${command:cpptools.activeConfigName}",
             "group": "build",
+            "windows": {
+                "options": {
+                    "cwd": "${workspaceFolder}",
+                    "env": {"PATH":"c:/msys64/usr/bin;c:/msys64/mingw64/bin/;${env:PATH}"}
+                }, 
+            },
             "presentation": {
                 "echo": true
             },
@@ -50,6 +74,12 @@
             "type": "shell",
             "command": "make build -f Makefile.main FILE=SymbolMapper_test VS_CFG=${command:cpptools.activeConfigName}",
             "group": "build",
+            "windows": {
+                "options": {
+                    "cwd": "${workspaceFolder}",
+                    "env": {"PATH":"c:/msys64/usr/bin;c:/msys64/mingw64/bin/;${env:PATH}"}
+                }, 
+            },
             "presentation": {
                 "echo": true
             },
@@ -60,6 +90,12 @@
             "type": "shell",
             "command": "make clean -f Makefile.main VS_CFG=${command:cpptools.activeConfigName}",
             "group": "build",
+            "windows": {
+                "options": {
+                    "cwd": "${workspaceFolder}",
+                    "env": {"PATH":"c:/msys64/usr/bin;c:/msys64/mingw64/bin/;${env:PATH}"}
+                }, 
+            },
             "presentation": {
                 "echo": true
             },

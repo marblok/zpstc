@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(gdb) Ex4 — windows debug run ",
+            "name": "(gdb) Ex4 — Windows debug run",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/Ex4_task2_dbg.exe",
@@ -15,7 +15,7 @@
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
-//            "miDebuggerPath": "d:/CodeBlocks_20_03/MinGW/bin/gdb.exe",
+            "miDebuggerPath": "c:/msys64/mingw64/bin/gdb.exe",
             "setupCommands": [
                 {
                     "description": "Włącz formatowanie kodu dla gdb",

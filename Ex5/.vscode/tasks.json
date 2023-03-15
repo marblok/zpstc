@@ -13,6 +13,12 @@
                 "kind": "build",
                 "isDefault": true
             },
+            "windows": {
+                "options": {
+                    "cwd": "${workspaceFolder}",
+                    "env": {"PATH":"c:/msys64/usr/bin;c:/msys64/mingw64/bin/;${env:PATH}"}
+                }, 
+            },
             "presentation": {
                 "echo": true
             },
@@ -23,6 +29,12 @@
             "type": "shell",
             "command": "make clean -f Makefile.main VS_CFG=${command:cpptools.activeConfigName}",
             "group": "build",
+            "windows": {
+                "options": {
+                    "cwd": "${workspaceFolder}",
+                    "env": {"PATH":"c:/msys64/usr/bin;c:/msys64/mingw64/bin/;${env:PATH}"}
+                }, 
+            },
             "presentation": {
                 "echo": true
             },

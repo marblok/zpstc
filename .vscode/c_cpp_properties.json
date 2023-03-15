@@ -1,0 +1,61 @@
+{
+    "configurations": [
+        {
+            "name": "Windows-Release",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/../../_DSPE_lib_minGW_/x86_64-w64-mingw32-gcc_12.2.0/include/**"
+            ],
+            "defines": [
+                "WIN32",
+                "__DEBUG__=0"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "gcc-x64"
+        },
+        {
+            "name": "Linux-Release",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/../_DSPE_lib_linux_/x86_64-linux-gnu-gcc_11/include/**"
+            ],
+            "defines": [
+                "LINUX",
+                "__DEBUG__=0"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "gcc-x64"
+        },
+        {
+            "name": "Windows-Debug",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/../../_DSPE_lib_minGW_/x86_64-w64-mingw32-gcc_12.2.0/include/**"
+            ],
+            "defines": [
+                "WIN32",
+                "__DEBUG__=1"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "gcc-x64"
+        },
+        {
+            "name": "Linux-Debug",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/../_DSPE_lib_linux_/x86_64-linux-gnu-gcc_11/include/**"
+            ],
+            "defines": [
+                "LINUX",
+                "__DEBUG__=1"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}

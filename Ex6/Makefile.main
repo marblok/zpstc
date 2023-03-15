@@ -6,10 +6,10 @@ ifeq ($(VS_CFG),Windows-Debug)
 	COMFLAG = -m64
 	
 	OUT_DIR = ./out_win_dbg
-	DSPElib_SUBDIR = MinGW-W64_8.1.0
+	DSPElib_SUBDIR = $(shell gcc -dumpmachine)-gcc_$(shell gcc -dumpversion)
 	MISC_LINKER_FLAGS = -static
 	LIBS = -lwinmm -lws2_32
-	DFLAGS = -DWIN32 -DDEVCPP 
+	DFLAGS = -DWIN32 
 endif
 ifeq ($(VS_CFG),Windows-Release)
 	MAKEFILE = "Makefile"
@@ -17,10 +17,10 @@ ifeq ($(VS_CFG),Windows-Release)
 	COMFLAG = -m64
 	
 	OUT_DIR = ./out_win_rls
-	DSPElib_SUBDIR = MinGW-W64_8.1.0
+	DSPElib_SUBDIR = $(shell gcc -dumpmachine)-gcc_$(shell gcc -dumpversion)
 	MISC_LINKER_FLAGS = -static
 	LIBS = -lwinmm -lws2_32
-	DFLAGS = -DWIN32 -DDEVCPP
+	DFLAGS = -DWIN32 
 endif
 ifeq ($(VS_CFG),Linux-Debug)
 	MAKEFILE = "Makefile"
@@ -31,7 +31,7 @@ ifeq ($(VS_CFG),Linux-Debug)
 	DSPElib_SUBDIR = $(shell gcc -dumpmachine)-gcc_$(shell gcc -dumpversion)
 	MISC_LINKER_FLAGS = 
 	LIBS := -lasound
-	DFLAGS = 
+	DFLAGS = -DLINUX
 endif
 ifeq ($(VS_CFG),Linux-Release)
 	MAKEFILE = "Makefile"
@@ -42,7 +42,7 @@ ifeq ($(VS_CFG),Linux-Release)
 	DSPElib_SUBDIR = $(shell gcc -dumpmachine)-gcc_$(shell gcc -dumpversion)
 	MISC_LINKER_FLAGS = 
 	LIBS := -lasound
-	DFLAGS = 
+	DFLAGS = -DLINUX
 endif
 
 
