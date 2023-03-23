@@ -1,10 +1,10 @@
 % Wielostopniowa zmiana szybkoœci próbkowania
 function MultiSRC_gui_v2
  
-clear all
-fig = findobj('tag', 'MultiSRC_gui_v2')
+fig = findobj('tag', 'MultiSRC_gui_v2b');
 if ~isempty(fig)
-    close(fig);
+   figure(fig);
+   return;
 end
 clc
 set(0, 'DefaultUicontrolFontName', 'Times New Roman CE')
@@ -76,11 +76,11 @@ end
  set(edtFS2, 'String', '');
  set(edtFS3, 'String', '');
  set(edtFS4, 'String', '');
- for i = 2:7
-    if ishandle(i)
-        close(i);
-    end
- end
+%  for i = 2:7
+%     if ishandle(i)
+%         close(i);
+%     end
+%  end
  end
 
 
@@ -565,11 +565,11 @@ set(edtFS2, 'Enable', 'on');
  set(txtNnum, 'String', '');
  drawnow;
  
- for i = 2:7
-    if ishandle(i)
-        close(i);
-    end
- end
+%  for i = 2:7
+%     if ishandle(i)
+%         close(i);
+%     end
+%  end
  
  if (ile_stopni == 1)
  L1 = str2double(get(edtL1, 'String')); 
@@ -746,7 +746,36 @@ set(edtFS2, 'Enable', 'on');
  
  end
  
+function onCloseRequest(x, y)
+  yn = questdlg('Zamkn¹æ aplikacjê?',...
+      'Figure Menu',...
+      'Yes','No','No');
+  switch yn
+      case 'Yes'
+        main_fig = findobj('tag', 'MultiSRC_gui_v2b');
+        if ~isempty(main_fig)
+          delete(main_fig);
+        end
+      case 'No'
+        return
+  end
+end
 
+function onDelete(~,~)
+    main_fig = findobj('tag', 'MultiSRC_gui_v2b');
+    if ~isempty(main_fig)
+      set(main_fig,'DeleteFcn',[]);
+      delete(main_fig);
+    end
+        
+    for ind = 2:7
+      subfig = findobj('tag', sprintf("MultiSRC_gui_v2b_fig%i", ind));
+      if ~isempty(subfig)
+        % set(subfig,'DeleteFcn',[]);
+        delete(subfig);
+      end
+    end
+end
  
 screen_resolution = get(0, 'ScreenSize');
 screen_width = screen_resolution(3);
@@ -760,8 +789,10 @@ window_position = [(screen_width/2 - window_width/2),...
  window_width,...
  window_height];
  
-main = figure('Name','Konwersja szybkoœci próbkowania (ver.2)',...
+main = figure('Name','Konwersja szybkoœci próbkowania (ver. 2b)',...
  'NumberTitle','off',...
+ 'HandleVisibility', 'on', ...
+ 'IntegerHandle', 'off', ...
  'Resize','off',...
  'Visible','on',...
  'MenuBar', 'none',...
@@ -769,8 +800,10 @@ main = figure('Name','Konwersja szybkoœci próbkowania (ver.2)',...
  'units', 'pixels',...
  'color', [.9 .9 .9],...
  'KeyPressFcn', @keyPress,...
+ 'DeleteFcn', @onDelete,...
+ 'CloseRequestFcn', @onCloseRequest,...
  'Position', window_position,...
- 'tag', 'MultiSRC_gui_v2');
+ 'tag', 'MultiSRC_gui_v2b');
  
 
  

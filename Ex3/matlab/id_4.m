@@ -53,8 +53,15 @@ if nn3 < 3, nn3=3; end;
 if nn4 < 3, nn4=3; end;
 
 N = [ nn1+1, nn+1, nn3+1, nn4+1 ];
-if sum(N) > 1000,
-  disp('wymagany sumaryczny rz¹d filtrów > 1000')
+if sum(N) > 2000,
+  for ind = 2:7
+    subfig = findobj('tag', sprintf("MultiSRC_gui_v2b_fig%i", ind));
+    if ~isempty(subfig)
+      set(subfig, 'visible', 'off');
+    end
+  end
+
+  errordlg('wymagany sumaryczny rz¹d filtrów > 2000', 'Zbyt du¿y rz¹d filtrów')
   return
 end
 
@@ -124,7 +131,13 @@ yy4=y4(p4+1:M4:end);
 wind0 = blackman(length(x));
 Y0 = 20*log10(abs(fftshift(fft(wind0'.*x,32768))));
 F_Y0 = linspace(-fold/2, fold/2, 32768+1); F_Y0(end) = [];
-figure(2)
+fig = findobj('Tag', 'MultiSRC_gui_v2b_fig2');
+if ~isempty(fig)
+  figure(fig);
+  clf(fig);
+else
+  fig = figure('IntegerHandle', 'off', 'Tag', 'MultiSRC_gui_v2b_fig2', 'Color', 'w');
+end
 subplot(1,2,1);
 plot(F_Y0, Y0);
 set(gca, 'xlim', [-fold/2, fold/2]);
@@ -132,7 +145,7 @@ xlabel('F [Hz]');
 title('syg. wejsciowy');
 
 %widmo sygba³u wyjsciowego
-figure(2)
+figure(fig)
 subplot(1,2,2);
 wind1 = blackman(length(yy4));
 Y1 = 20*log10(abs(fftshift(fft(wind1'.*yy4,32768))));
@@ -144,7 +157,13 @@ title('syg. wyjsciowy');
 
 
 %filtr I
-figure(3)
+fig = findobj('Tag', 'MultiSRC_gui_v2b_fig3');
+if ~isempty(fig)
+  figure(fig);
+  clf(fig);
+else
+  fig = figure('IntegerHandle', 'off', 'Tag', 'MultiSRC_gui_v2b_fig3', 'Color', 'w');
+end
 plot(F21,20*log10(abs(H1)));
 hold on;
 plot ([fp1 fp1]*fold*L1,[-80 5],'k--');
@@ -155,7 +174,13 @@ xlabel('F [Hz]');
 title('filtr I');
 
 %filtr II
-figure(4)
+fig = findobj('Tag', 'MultiSRC_gui_v2b_fig4');
+if ~isempty(fig)
+  figure(fig);
+  clf(fig);
+else
+  fig = figure('IntegerHandle', 'off', 'Tag', 'MultiSRC_gui_v2b_fig4', 'Color', 'w');
+end
 plot(F2,20*log10(abs(H2)));
 hold on;
 plot ([fp2 fp2]*fold*L1/M1*L2,[-80 5],'k--');
@@ -166,7 +191,13 @@ xlabel('F [Hz]');
 title('filtr II');
 
 %filtr III
-figure(5)
+fig = findobj('Tag', 'MultiSRC_gui_v2b_fig5');
+if ~isempty(fig)
+  figure(fig);
+  clf(fig);
+else
+  fig = figure('IntegerHandle', 'off', 'Tag', 'MultiSRC_gui_v2b_fig5', 'Color', 'w');
+end
 plot(F33,20*log10(abs(H3)));
 hold on;
 plot ([fp3 fp3]*fold*L1/M1*L2/M2*L3,[-100 5],'k--');
@@ -177,7 +208,13 @@ xlabel('F [Hz]');
 title('filtr III');
 
 %filtr IV
-figure(6)
+fig = findobj('Tag', 'MultiSRC_gui_v2b_fig6');
+if ~isempty(fig)
+  figure(fig);
+  clf(fig);
+else
+  fig = figure('IntegerHandle', 'off', 'Tag', 'MultiSRC_gui_v2b_fig6', 'Color', 'w');
+end
 plot(F44,20*log10(abs(H4)));
 hold on;
 plot ([fp4 fp4]*fold*L1/M1*L2/M2*L3/M3*L4,[-80 5],'k--');
@@ -204,7 +241,13 @@ h1L(1:L2*L3*L4:length(h1)*L2*L3*L4)= h1;
 t = conv(conv(conv(h1L, h2L), h3L), h4L);
 
 
-figure(7)
+fig = findobj('Tag', 'MultiSRC_gui_v2b_fig7');
+if ~isempty(fig)
+  figure(fig);
+  clf(fig);
+else
+  fig = figure('IntegerHandle', 'off', 'Tag', 'MultiSRC_gui_v2b_fig7', 'Color', 'w');
+end
 [H2L] = freqz(h2L/L2, 1, 8192*32, fold*L);
 [H1L] = freqz(h1L/L1, 1, 8192*32, fold*L);
 [H3L] = freqz(h3L/L3, 1, 8192*32, fold*L);
@@ -225,10 +268,6 @@ plot(F212,20*log10(abs(H12)));
 axis ([0 fold*L/2  -80 5]);
 xlabel('F [Hz]');
 title('charakterystyka zbiorcza');
-
-for i=2:7,
-    set(i, 'color', 'w');
-end
 
 
 
